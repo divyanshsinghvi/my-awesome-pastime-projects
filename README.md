@@ -1,1 +1,1 @@
-# my-awesome-pasttime-projects
+# my-awesome-pastime-projects
