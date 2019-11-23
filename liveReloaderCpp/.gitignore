@@ -1,0 +1,5 @@
+*.make
+premake5
+Makefile
+bin/
+obj/
