@@ -12,19 +12,14 @@ workspace "RePlex"
   filter "configurations:Release"
     defines {"RELEASE"}
     optimize "On"
-
-  project "RePlex"
+  
+  project "RePlexTest"
     kind "SharedLib"
-    files {"lib/**.h", "lib/**.cpp"}
-    linkoptions {"-Wl,--no-as-needed","-ldl"}
+    files {"test/**.cpp",  "test/pub/*.h"}
 
   project "RePlexRuntime"
     kind "ConsoleApp"
     files {"runtime/**.h", "runtime/**.cpp"}
-    links {"RePlex"}
     linkoptions {"-Wl,--no-as-needed","-ldl"}
-    includedirs{"lib/pub"}
+    includedirs{"lib/pub", "test/pub"}
 
-  project "RePlexTest"
-    kind "SharedLib"
-    files {"test/**.h", "test/**.cpp", "test/pub/*.h"}

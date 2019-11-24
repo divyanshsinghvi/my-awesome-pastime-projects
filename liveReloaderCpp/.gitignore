@@ -3,3 +3,4 @@ premake5
 Makefile
 bin/
 obj/
+.gdb_history
